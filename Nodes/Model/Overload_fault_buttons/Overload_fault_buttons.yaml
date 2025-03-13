@@ -1,0 +1,47 @@
+Name: Overload fault buttons
+Type: FolderType
+Children:
+- Name: Button Bottle unloader overload
+  Type: OverloadFaultButton
+  Children:
+  - Name: Name
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Bottle Unloader Overload"}
+  - Name: PLC_Tag
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1_3100/Tags/Controller Tags/Missing_Bottle_Indicator"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Alias1
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+- Name: Button Load transfer disk overload
+  Type: OverloadFaultButton
+  Children:
+  - Name: Name
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Load Transfer Disk Overload"}
+  - Name: PLC_Tag
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Alias1
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
